@@ -14,7 +14,7 @@
 
 write-host "======== Step: Exporting scan results to a Sarif File ========"
 # Creating script to get ozasmt and export to sarif format
-write-output "login_file $env:aseHostname `"$env:aseToken`" -acceptssl" > scriptpase.scan
+write-output "login_file $env:aseHostname `"$env:aseToken`" -acceptssl" > scriptsarif.scan
 write-output "export sarif srcresult.sarif `"$env:aseAppName-$env:BuildNumber.ozasmt`"" >> scriptsarif.scan
 write-output "exit" >> scriptsarif.scan  
 
