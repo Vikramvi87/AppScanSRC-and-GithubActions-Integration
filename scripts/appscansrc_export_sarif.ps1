@@ -19,4 +19,4 @@ write-output "export sarif srcresult.sarif `"$env:aseAppName-$env:BuildNumber.oz
 write-output "exit" >> scriptsarif.scan  
 
 # Executing the script
-AppScanSrcCli scr scriptpase.scan
+AppScanSrcCli scr scriptsarif.scan
