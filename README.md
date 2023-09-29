@@ -8,10 +8,10 @@ Requirements:<br>
 3 - Install Github Actions for Windows in same Windows Server that has AppScan Source.
 3.1 - Add Github Actions as a Service.<br>
 3.2 - Change User Service to same User that has access in AppScan Enterprise.<br>
-  SOurce: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners <br>
+  Source: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners <br>
 4 - Create AppScan Enterprise token <install_dir>\bin\ounceautod.exe -u username -p password --persist.<br>
   Source: https://help.hcltechsw.com/appscan/Source/10.3.0/topics/ounce_auto_login.html <br>
-5 - Configure AppScan Source to Autheticate in AppSCan Enterprise. <br>
+5 - Configure AppScan Source to Authenticate  in AppScan Enterprise. <br>
   Source: https://help.hcltechsw.com/appscan/Source/10.3.0/topics/preferences_ase_2.html
 6 - In the YAML file:<br>
 6.1 - Add AppScan Enterprise (ase) key pair (aseApiKeyId and aseApiKeySecret) and hostname (aseHostname).<br>
