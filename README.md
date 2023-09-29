@@ -52,8 +52,6 @@ jobs:
           .\appscansrc_publish_assessment_to_enterprise.ps1
           Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/main/scripts/appscansrc_check_security_gate.ps1 -OutFile appscansrc_check_security_gate.ps1
           .\appscansrc_check_security_gate.ps1
-          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-GithubActions-Integration/main/scripts/appscansrc_export_sarif.ps1 -OutFile appscansrc_export_sarif.ps1
-          .\appscansrc_export_sarif.ps1
       - uses: actions/upload-artifact@v3
         with:
           name: Upload report
