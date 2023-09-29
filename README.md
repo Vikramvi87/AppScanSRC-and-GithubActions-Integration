@@ -42,15 +42,15 @@ jobs:
       - name: Scan SAST
         shell: pwsh
         run: |
-          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/main/scripts/appscanase_create_application_ase.ps1 -OutFile appscanase_create_application_ase.ps1
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-GithubActions-Integration/main/scripts/appscanase_create_application_ase.ps1 -OutFile appscanase_create_application_ase.ps1
           .\appscanase_create_application_ase.ps1
-          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/main/scripts/appscansrc_create_config_scan_folder.ps1 -OutFile appscansrc_create_config_scan_folder.ps1
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-GithubActions-Integration/main/scripts/appscansrc_create_config_scan_folder.ps1 -OutFile appscansrc_create_config_scan_folder.ps1
           .\appscansrc_create_config_scan_folder.ps1
-          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/main/scripts/appscansrc_scan.ps1 -OutFile appscansrc_scan.ps1
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-GithubActions-Integration/main/scripts/appscansrc_scan.ps1 -OutFile appscansrc_scan.ps1
           .\appscansrc_scan.ps1
-          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/main/scripts/appscansrc_publish_assessment_to_enterprise.ps1 -OutFile appscansrc_publish_assessment_to_enterprise.ps1
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-GithubActions-Integration/main/scripts/appscansrc_publish_assessment_to_enterprise.ps1 -OutFile appscansrc_publish_assessment_to_enterprise.ps1
           .\appscansrc_publish_assessment_to_enterprise.ps1
-          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/main/scripts/appscansrc_check_security_gate.ps1 -OutFile appscansrc_check_security_gate.ps1
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/jrocia/AppScanSRC-and-GithubActions-Integration/main/scripts/appscansrc_check_security_gate.ps1 -OutFile appscansrc_check_security_gate.ps1
           .\appscansrc_check_security_gate.ps1
       - uses: actions/upload-artifact@v3
         with:
