@@ -5,17 +5,17 @@ It will help to Integrate AppScan Source on Github. It will enable Github to sta
 Requirements:<br>
 1 - AppScan Source in Windows Server.<br>
 2 - Add AppScan Source bin folder to Windows PATH Environment Variable.<br>
-3 - Install Github Actions for Windows in same Windows Server that has AppScan Source.
+3 - Install Github Actions for Windows in same Windows Server that has AppScan Source.<br>
 3.1 - Add Github Actions as a Service.<br>
 3.2 - Change User Service to same User that has access in AppScan Enterprise.<br>
   Source: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners <br>
 4 - Create AppScan Enterprise token <install_dir>\bin\ounceautod.exe -u username -p password --persist.<br>
   Source: https://help.hcltechsw.com/appscan/Source/10.3.0/topics/ounce_auto_login.html <br>
 5 - Configure AppScan Source to Authenticate  in AppScan Enterprise. <br>
-  Source: https://help.hcltechsw.com/appscan/Source/10.3.0/topics/preferences_ase_2.html
+  Source: https://help.hcltechsw.com/appscan/Source/10.3.0/topics/preferences_ase_2.html<br>
 6 - In the YAML file:<br>
 6.1 - Add AppScan Enterprise (ase) key pair (aseApiKeyId and aseApiKeySecret) and hostname (aseHostname).<br>
-6.2 - When compiledArtifactFolder variable is <b>none</b> that means AppScan Source will run SourceCodeOnly scan, if you have a step before the scan where you are creating the compiled files (.war, .jar, .ear, .dll or .exe) you have option to pass the folder where you have the compiled files and then the scan will be in this files. 
+6.2 - When compiledArtifactFolder variable is <b>none</b> that means AppScan Source will run SourceCodeOnly scan, if you have a step before the scan where you are creating the compiled files (.war, .jar, .ear, .dll or .exe) you have option to pass the folder where you have the compiled files and then the scan will be in this files.<br> 
 
 ```yaml
 env:
